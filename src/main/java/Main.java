@@ -22,6 +22,23 @@ public class Main {
             System.out.println(game);
             System.out.println("Entrez une lettre : ");
             final var letter = scanner.nextLine().charAt(0);
+
+            // Voir si la lettre est correcte
+            game.guessLetter(letter);
+
+            // Savoir si la lettre est correcte ou non
+            if(game.isLost()){
+                System.out.println(game);
+                System.out.println("Perdu ");
+                break;
+
+            }
+            if(game.isWon()){
+                System.out.println(game);
+                System.out.println("Gagné ");
+                break;
+
+            }
         }
 
     }

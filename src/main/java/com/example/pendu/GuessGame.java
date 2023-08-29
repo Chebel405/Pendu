@@ -27,4 +27,29 @@ public class GuessGame {
                 ", guessWord=" + guessWord +
                 '}';
     }
+
+    public void guessLetter(char letter) {
+        if(secretWord.contains(letter) && !guessWord.contains(letter)){
+            var index = 0;
+            //Si la lettre est présente à tel endroit
+            for(char c : secretWord){
+
+                if(c == letter) {
+                    guessWord.set(index, c);
+                }
+                index++;
+
+            }
+        }else {
+            lifePoints -= 1;
+        }
+    }
+
+    public boolean isLost() {
+        return lifePoints <= 0;
+    }
+
+    public boolean isWon() {
+        return !guessWord.contains('_');
+    }
 }
