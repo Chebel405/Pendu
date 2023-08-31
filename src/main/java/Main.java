@@ -5,11 +5,15 @@ import org.springframework.boot.SpringApplication;
 import java.util.Random;
 import java.util.Scanner;
 
-
+/**
+ * Classe du point d'entrée du jeu
+ */
 public class Main {
 
     public static void main(String[] args) {
-
+        /**
+         * Point d'entréedu main avec l'algorythme principal
+         */
 
         final var random = new Random();
         final var words = "chien chat loup apocope apherese malade epilespie".split(" ");
